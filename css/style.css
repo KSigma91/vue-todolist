@@ -4,14 +4,26 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 #container {
     margin: 0 auto;
     width: 100%;
     height: 100vh;
 }
 
-li {
-    list-style-type: none;
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > img {
+    max-width: 100%;
+    height: 100px;
+    margin-top: 50px;
 }
 
 /* barra di compilazione */
@@ -19,7 +31,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    margin: 40px;
 }
 
 #compile > input {
@@ -32,7 +44,8 @@ li {
 #compile > button {
     margin-left: 15px;
     border-radius: 10px;
-    border: 2px solid #cecece;
+    border: 0;
+    box-shadow: 2px 2px 2px #a7a7a7;
     padding: 12px;
     font-weight: 600;
 }
@@ -40,9 +53,24 @@ li {
 /* lista item */
 #content {
     display: flex;
+    justify-content: baseline;
     margin: 0 auto;
-    background: #cecece;
-    width: 80%;
+    background: #f3f3f3;
+    width: 490px;
+}
+
+#content > ul {
+    width: 390px;
+    margin: 30px auto;
+}
+
+#content > ul li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 15px;
+    border-bottom: 2px solid #e7e7e7;
 }
 
 .done-item {

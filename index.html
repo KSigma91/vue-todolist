@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome -->
@@ -13,6 +17,10 @@
 <body>
 
     <div id="container">
+
+        <header>
+            <img src="http://lofrev.net/wp-content/photos/2014/09/Logo-free.jpg" alt="free_logo_img">
+        </header>
 
         <!-- barra di compilazione -->
         <section id="compile">
@@ -25,7 +33,7 @@
             <ul v-if="listArray.length > 0">
                 <li v-for="(element, i) in listArray" class="item" :class="element.done === true ? 'done-item' : ''" :key="i">
                     {{ element.text }}
-                    <i class="fas fa-times" @click="delItem"></i>
+                    <i class="fas fa-times" @click="delItem(i)"></i>
                 </li>
             </ul>
             <span v-else>Non ci sono cose da fare</span>

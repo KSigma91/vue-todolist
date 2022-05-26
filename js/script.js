@@ -51,10 +51,11 @@ var app = new Vue({
         delItem(index) {       
             this.listArray.splice(index, 1);
         },
+        addItem() {
+            if(this.listArray.length !== "") {
+                this.listArray.push(this.newItem);
+                this.newItem = "";
+            }
+        }
     }
 });
-
-// if(this.newItem !== "") {
-//     this.listArray.push(this.newItem);
-//     this.newItem = "";
-// }
