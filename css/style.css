@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* barra di compilazione */
+#compile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+#compile > input {
+    padding: 12px;
+    width: 350px;
+    border-radius: 10px;
+    border: 2px solid #cecece;
+}
+
+#compile > button {
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 2px solid #cecece;
+    padding: 12px;
+    font-weight: 600;
+}
+
+/* lista item */
+#content {
+    display: flex;
+    margin: 0 auto;
+    background: #cecece;
+    width: 80%;
+}
+
+.done-item {
+    text-decoration: line-through;
+}

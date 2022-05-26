@@ -16,17 +16,19 @@
 
         <!-- barra di compilazione -->
         <section id="compile">
-            <input type="text" placeholder="">
-            <button>Aggiungi</button>
+            <input type="text" placeholder="scrivi qui" v-model="newItem">
+            <button @click="addItem">Aggiungi</button>
         </section>
         
         <!-- lista item -->
         <main id="content">
-            <ul>
-                <li class="item">
+            <ul v-if="listArray.length > 0">
+                <li v-for="(element, i) in listArray" class="item" :class="done-item" :key="i">
+                    {{ element.text }}
                     <i class="fas fa-times"></i>
                 </li>
             </ul>
+            <span v-else>Non ci sono cose da fare</span>
         </main>
     </div>
     
