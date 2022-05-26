@@ -16,7 +16,7 @@
 
         <!-- barra di compilazione -->
         <section id="compile">
-            <input type="text" placeholder="scrivi qui" v-model="newItem">
+            <input type="text" keyup.enter="addItem" placeholder="scrivi qui" v-model="newItem">
             <button @click="addItem">Aggiungi</button>
         </section>
         
@@ -25,13 +25,13 @@
             <ul v-if="listArray.length > 0">
                 <li v-for="(element, i) in listArray" class="item" :class="element.done === true ? 'done-item' : ''" :key="i">
                     {{ element.text }}
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times" @click="delItem"></i>
                 </li>
             </ul>
             <span v-else>Non ci sono cose da fare</span>
         </main>
     </div>
-    <!-- :bind="{ 'is-selected': item.status' }"> -->
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

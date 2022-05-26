@@ -48,13 +48,9 @@ var app = new Vue({
         ]  
     },
     methods : {
-        addItem() {       
-            if(this.listArray.length === true) {
-                
-            } else {
-                this.listArray.length === false;
-            }
-        }
+        delItem(index) {       
+            this.listArray.splice(index, 1);
+        },
     }
 });
 
