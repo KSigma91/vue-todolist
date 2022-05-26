@@ -24,6 +24,7 @@
         <main id="content">
             <ul v-if="listArray.length > 0">
                 <li v-for="(element, i) in listArray" class="item" :class="done-item" :key="i">
+                    {{ element.done }}
                     {{ element.text }}
                     <i class="fas fa-times"></i>
                 </li>
